@@ -12,7 +12,7 @@ module.exports = function (grunt) {
                 src: 'build/glyphs/*.svg',
                 dest: 'build/raw-font',
                 options: {
-                    font: 'Twemoji Mozilla',
+                    font: 'Segoe UI Emoji',
                     engine: 'fontforge',
                     types: 'ttf',
                     autoHint: false,

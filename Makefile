@@ -4,7 +4,7 @@ PERL       ?= perl
 PYTHON     ?= python3
 TTX        ?= ttx
 
-FONT_NAME  = Twemoji\ Mozilla
+FONT_NAME  = Segoe\ UI\ Emoji
 
 BUILD_DIR  = build
 
@@ -30,7 +30,7 @@ $(FINAL_TARGET) : $(RAW_FONT) $(OT_SOURCE)
 	        -e 'while(<>) {' \
 	        -e '  $$ps = 1 if m/nameID="6"/;' \
 	        -e '  $$ps = 0 if m|</namerecord>|;' \
-	        -e '  s/Twemoji Mozilla/TwemojiMozilla/ if $$ps;' \
+	        -e '  s/Segoe UI Emoji/SegoeUIEmoji/ if $$ps;' \
 	        -e '  print;' \
 	        -e '}' $(RAW_FONT).names
 	$(TTX) -m $(RAW_FONT) -o $(RAW_FONT_TEMPORARY) $(RAW_FONT).names
